@@ -100,7 +100,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-                            background: linear-gradient(90deg, transparent, rgba(139, 195, 74, 0.2), transparent);
+            background: linear-gradient(90deg, transparent, rgba(139, 195, 74, 0.2), transparent);
             animation: shine 3s infinite;
         }
 
@@ -253,6 +253,78 @@
             z-index: 1;
         }
 
+        .clients-section {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            margin-bottom: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            animation: fadeInUp 1s ease;
+        }
+
+        .clients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .client-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+            animation: fadeInUp 0.6s ease backwards;
+            border: 2px solid #f5f5f5;
+        }
+
+        .client-card:nth-child(1) { animation-delay: 0.1s; }
+        .client-card:nth-child(2) { animation-delay: 0.2s; }
+        .client-card:nth-child(3) { animation-delay: 0.3s; }
+        .client-card:nth-child(4) { animation-delay: 0.4s; }
+
+        .client-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(139, 195, 74, 0.3);
+            border-color: #8BC34A;
+        }
+
+        .client-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4em;
+            color: #8BC34A;
+            transition: all 0.4s ease;
+        }
+
+        .client-card:hover .client-image {
+            transform: scale(1.05);
+        }
+
+        .client-info {
+            padding: 25px;
+            background: white;
+        }
+
+        .client-info h3 {
+            color: #1a1a1a;
+            font-size: 1.4em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .client-info p {
+            color: #666;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+
         .contact-info {
             background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
             padding: 50px;
@@ -370,7 +442,7 @@
             left: -50%;
             width: 200%;
             height: 200%;
-                            background: radial-gradient(circle, rgba(139, 195, 74, 0.1) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(139, 195, 74, 0.1) 0%, transparent 70%);
             animation: rotate 20s linear infinite;
         }
 
@@ -445,12 +517,14 @@
             }
 
             .main-content,
+            .clients-section,
             .contact-info,
             .cta-section {
                 padding: 30px 20px;
             }
 
-            .services-grid {
+            .services-grid,
+            .clients-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -464,7 +538,7 @@
     <div class="container">
         <header>
             <div class="logo-container">
-                <img src="logo.png" alt="Bait Al Wadi Logo" class="logo">
+                <img src="logo.jpeg" alt="Bait Al Wadi Logo" class="logo">
             </div>
             <h1>Bait Al Wadi Technical Services LLC</h1>
             <p class="tagline">Your Trusted Partner in Technical Solutions</p>
@@ -519,6 +593,41 @@
                     <div class="service-card">
                         <h3>🎨 Interior & Fit Outs</h3>
                         <p>Complete interior design and fit-out solutions to transform your space into a functional and aesthetically pleasing environment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="clients-section">
+            <h2>Our Valued Clients</h2>
+            <p class="intro-text">We take pride in serving prestigious clients across the UAE, delivering excellence in every project.</p>
+            <div class="clients-grid">
+                <div class="client-card">
+                    <div class="client-image">🚪</div>
+                    <div class="client-info">
+                        <h3>ORYX Doors and Windows</h3>
+                        <p>Leading manufacturer of premium doors and windows. We provide comprehensive installation and maintenance services for their high-quality products.</p>
+                    </div>
+                </div>
+                <div class="client-card">
+                    <div class="client-image">🎓</div>
+                    <div class="client-info">
+                        <h3>American School Barsha</h3>
+                        <p>Trusted partner for educational facilities maintenance. We ensure a safe and comfortable learning environment with our technical services.</p>
+                    </div>
+                </div>
+                <div class="client-card">
+                    <div class="client-image">🏘️</div>
+                    <div class="client-info">
+                        <h3>Meadows Villas</h3>
+                        <p>Premier residential community partner. We deliver exceptional facilities management services to maintain the luxury lifestyle of residents.</p>
+                    </div>
+                </div>
+                <div class="client-card">
+                    <div class="client-image">💎</div>
+                    <div class="client-info">
+                        <h3>Diamond View</h3>
+                        <p>Exclusive property management partnership. Our comprehensive technical solutions ensure optimal comfort and functionality for this premium development.</p>
                     </div>
                 </div>
             </div>
